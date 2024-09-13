@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar-desktop {
+    background-color: #f9f9f9;
+    width: 100%;
+    display: none; 
+}
+
+.navbar-ul-desktop {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+}
+
+.navbar-ul-desktop li {
+    margin: 0 1.5em;
+}
+
+.navbar-ul-desktop a {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-ul-desktop a:hover {
+    color: #3f3d3d;
+}
+
+.navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    width: 100%;
+    position: relative;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-title {
+    font-size: 24px;
+    color: #8f8f8f;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar-ul-mobile {
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.navbar-ul-mobile.open {
+    max-height: 500px;
+}
+
+.navbar-ul-mobile li {
+    margin: 10px 0;
+}
+
+.navbar-ul-mobile a {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-ul-mobile a:hover {
+    color: #3f3d3d;
+}
+
+
+@media only screen and (min-width: 769px) {
+    .navbar-desktop {
+        display: block; 
+    }
+
+    .navbar-mobile {
+        display: none; 
+}
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: flex; 
+    }
+
+    .navbar-desktop {
+        display: none; 
+    }
+}

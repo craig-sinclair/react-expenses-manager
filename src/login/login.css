@@ -1,0 +1,226 @@
+/* Reset styles for body */
+body {
+    font-family: verdana;
+    margin: 0;
+    padding: 0;
+  }
+
+  @keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #46327b;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 18s linear infinite;
+}
+
+.background li:nth-child(0) {
+    left: 61%;
+    width: 147px;
+    height: 147px;
+    bottom: -147px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 55%;
+    width: 103px;
+    height: 103px;
+    bottom: -103px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 25%;
+    width: 204px;
+    height: 204px;
+    bottom: -204px;
+    animation-delay: 9s;
+}
+.background li:nth-child(3) {
+    left: 27%;
+    width: 106px;
+    height: 106px;
+    bottom: -106px;
+    animation-delay: 10s;
+}
+.background li:nth-child(4) {
+    left: 79%;
+    width: 137px;
+    height: 137px;
+    bottom: -137px;
+    animation-delay: 6s;
+}
+.background li:nth-child(5) {
+    left: 0%;
+    width: 202px;
+    height: 202px;
+    bottom: -202px;
+    animation-delay: 4s;
+}
+.background li:nth-child(6) {
+    left: 51%;
+    width: 195px;
+    height: 195px;
+    bottom: -195px;
+    animation-delay: 29s;
+}
+.background li:nth-child(7) {
+    left: 42%;
+    width: 107px;
+    height: 107px;
+    bottom: -107px;
+    animation-delay: 5s;
+}
+.background li:nth-child(8) {
+    left: 78%;
+    width: 111px;
+    height: 111px;
+    bottom: -111px;
+    animation-delay: 22s;
+}
+.background li:nth-child(9) {
+    left: 24%;
+    width: 207px;
+    height: 207px;
+    bottom: -207px;
+    animation-delay: 40s;
+}
+  
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  
+
+  .login-container {
+    min-height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 50vw; 
+    max-width: 500px; 
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 999999;
+  }
+  
+  .form-header {
+    color: #8f8f8f;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login-text-box {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 95%);
+    padding: 15px;
+    width: 90%; 
+    font-size: 1em;
+  }
+  
+  .login-text-box::placeholder {
+    font-size: 1em;
+    color: #888;
+  }
+  
+  .login-text-box:focus {
+    background-color: #fff;
+    outline: none;
+    border-color: #555;
+  }
+  
+  .login-btn {
+    background-color: #eee;
+    border-radius: 10px;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 15px;
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: background-color 300ms, color 300ms;
+  }
+  
+  .login-btn:hover {
+    background-color: rgb(137, 43, 226);
+    color: white;
+  }
+  
+
+  .anchor-no-style{
+    text-decoration: none;
+  }
+
+  .not-registered-text{
+    font-size: 18px;
+    margin-top: 10px;
+    justify-content: start;
+    color: #892be2;
+  }
+
+  .not-registered-text:hover{
+    opacity: 75%;
+  }
+  @media only screen and (max-width: 768px) {
+    .login-form {
+      width: 90%; 
+    }
+  
+    .login-btn {
+      font-size: 1em;
+      padding: 10px;
+    }
+  
+    .login-text-box {
+      font-size: 1em;
+      padding: 12px;
+    }
+
+    .not-registered-text{
+        font-size: 14px;
+    }
+  }
+
+
+  
