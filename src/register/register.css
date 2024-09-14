@@ -56,3 +56,10 @@ body{
 .step-indicator.active {
     background-color: #892be2;
 }
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}

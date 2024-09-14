@@ -7,6 +7,7 @@ const port = process.env.port || 5000;
 require('dotenv').config();
 
 app.use(cors());
+app.use(express.json())
 
 let pool;
 try{
@@ -34,7 +35,7 @@ catch(err){
     console.log(`An error occurred while connecting to db`, err);
 }
 
-
+// SLECT * FROM expenses (table of all expenses)
 app.get('/api/expenses', async (req, res) => {
     try{
         const result = await pool.query('SELECT * FROM expenses;');
@@ -43,6 +44,23 @@ app.get('/api/expenses', async (req, res) => {
     catch(err){
         console.log(err);
         res.status(500).json({ error: 'Server Error'});
+    }
+});
+
+//Register a new user (INSERT into users)
+app.post('/api/register', async (req, res) => {
+    const { email, username, budget, password } = req.body;
+
+    try{
+        const result = await pool.query(
+            `CALL insert_user($1, $2, $3, $4)`, 
+            [email, username, budget, password]
+        );
+        res.status(200).json({ message: 'User registered successfully'});
+    }
+    catch(err){
+        console.log(`Error inserting user`, err);
+        res.status(500).json({error: `Error inserting user`});
     }
 });
 
