@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.profile-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

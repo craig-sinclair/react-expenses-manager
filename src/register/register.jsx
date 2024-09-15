@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './register.css';
-
+import { useNavigate } from 'react-router-dom';
+import { registerUser } from '../backend';
 
 function Register() {
     const [step, setStep] = useState(1);
@@ -13,6 +14,8 @@ function Register() {
     });
 
     const[errors, setErrors] = useState({});
+
+    const navigate = useNavigate();
 
     // Helper function to check for valid email through regex
     const validateEmail = (email) => {
@@ -61,8 +64,9 @@ function Register() {
     // POST request to insert form information into postgreSQL database
     const handleSubmit = async () => {
         try{
-            const response = await axios.post('http://localhost:5000/api/register', formData);
-            console.log('Inserted user sucessfully');
+            await registerUser(formData);
+            console.log(`Registered user successfully`);
+            navigate('/');
         }
         catch(error){
             console.log(`An error occurred!`, error)

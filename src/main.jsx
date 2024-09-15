@@ -7,6 +7,7 @@ import { fetchExpenses } from './backend';
 import Login from './login/Login';
 import Navbar from './navbar/navbar';
 import Register from './register/register';
+import Profile from './profile/profile';
 
 import './index.css'
 
@@ -46,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={<Expenses />} />
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/profile" element={<Profile />}/>
     </Routes>
 
   </Router>
