@@ -3,6 +3,7 @@ body{
     padding: 0;
     height: 100%;
     font-family: verdana;
+    overflow-y: hidden;
 }
 
 .background-container{
@@ -19,12 +20,16 @@ body{
     text-align: center;
     padding: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 50vw; 
-    max-width: 500px; 
+    width: 30%;
     background-color: #fff;
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 768px){
+    .register-container{
+        width: 89%;
+    }
+}
 .register-header-text{
     font-weight: 400;
     font-size: 20px;   
